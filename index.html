@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+
+
+    <div class="container">
+        <h1>My Todo List</h1>
+        
+        <div class="input-container">
+            <input type="text" id="task-name" placeholder="Task name..." autocomplete="off">
+            <input type="text" id="task-description" placeholder="Description..." autocomplete="off">
+            <input type="text" id="task-objective" placeholder="Objective..." autocomplete="off">
+            <input type="text" id="start-date" placeholder="Start date..." class="date-picker">
+            <input type="text" id="end-date" placeholder="End date..." class="date-picker">
+
+            <div class="difficulty-selector">
+                <label>Difficulty:</label>
+                <div class="difficulty-buttons">
+                    <button type="button" class="difficulty-btn" data-difficulty="easy">Easy</button>
+                    <button type="button" class="difficulty-btn" data-difficulty="medium">Medium</button>
+                    <button type="button" class="difficulty-btn" data-difficulty="hard">Hard</button>
+                </div>
+            </div>
+            <button id="add-task-btn">Create</button>
+        </div>
+        
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+            <button id="clear-completed">Clear Completed</button>
+        </div>
+        
+        <div class="task-counter">
+            <span id="task-count">0 tasks</span>
+        </div>
+        
+        <ul id="task-list"></ul>
+    </div>
+    
+    <!-- Edit Task Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">×</span>
+            <h2>Edit Task</h2>
+            <div class="edit-form">
+                <div class="form-group">
+                    <label for="edit-task-name">Task Name</label>
+                    <input type="text" id="edit-task-name">
+                </div>
+                <div class="form-group">
+                    <label for="edit-start-date">Start Date</label>
+                    <input type="text" id="edit-start-date" class="date-picker">
+                </div>
+                <div class="form-group">
+                    <label for="edit-end-date">End Date</label>
+                    <input type="text" id="edit-end-date" class="date-picker">
+                </div>
+                <div class="form-group">
+                    <label for="edit-task-description">Description</label>
+                    <input type="text" id="edit-task-description">
+                </div>
+                <div class="form-group">
+                    <label for="edit-task-objective">Objective</label>
+                    <input type="text" id="edit-task-objective">
+                </div>
+                <div class="form-group">
+                    <label>Difficulty</label>
+                    <div class="difficulty-buttons">
+                        <button type="button" class="difficulty-btn edit-difficulty-btn" data-difficulty="easy">Easy</button>
+                        <button type="button" class="difficulty-btn edit-difficulty-btn" data-difficulty="medium">Medium</button>
+                        <button type="button" class="difficulty-btn edit-difficulty-btn" data-difficulty="hard">Hard</button>
+                    </div>
+                </div>
+
+                <div class="task-info" id="task-creation-time"></div>
+                <button id="save-edit-btn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

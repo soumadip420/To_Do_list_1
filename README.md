@@ -2,8 +2,6 @@
 
 A clean, responsive, and user-friendly web application designed to help users efficiently manage their daily tasks, objectives, and project timelines.
 
-![Application Screenshot](index.html) *(Note: Replace with your repository screenshot path if needed)*
-
 ## 🚀 Features
 
 - **Detailed Task Creation:** Input task names, descriptions, and specific objectives.

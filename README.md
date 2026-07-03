@@ -44,4 +44,7 @@ to_do_list/
 ├── script.js      # App logic, task array handling, and DOM rendering
 └── README.md      # Documentation file
 ```
+## 📄 License
+
+This project is licensed under the MIT License - feel free to customize, modify, and build upon it as you like!
 
